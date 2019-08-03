@@ -1,0 +1,13 @@
+.container {
+    margin: 0 auto;
+    max-width: 750px;
+    padding: 1rem;
+
+    display: flex; //enable flexbox
+    flex-direction: column; //want content and header above footer, not l or r
+    min-height: 100vh; //viewport height, set container height to screen height
+}
+
+.content {
+    flex-grow: 1; //allow container to grow and leave sapce for footer
+}
