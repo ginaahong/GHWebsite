@@ -12,7 +12,7 @@ const IndexPage = () => {
             <Head title="Home"/>
             <h1>Hello.</h1>
             <h2>I'm Gina, a UBC COGS student!</h2>
-            <p><Link to="/contact">Contact me.</Link>
+            <p><Link to="/contact">Need a developer? Contact me.</Link>
             <br />
             <Link to="/about">About me.</Link>
             </p>
