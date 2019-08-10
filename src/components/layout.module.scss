@@ -1,3 +1,18 @@
+html {
+  font-family: 'Circular Std Bold', sans-serif;
+  font-weight: 800;
+  -ms-text-size-adjust: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+.bg {
+    background-image: url(../images/main_bg.png);
+    background-repeat: repeat-y;
+    background-size: 100%;
+    background-color: hsla(0,0%,100%,0.55);
+    background-blend-mode: overlay;
+}
+
 .container {
     margin: 0 auto;
     max-width: 750px;

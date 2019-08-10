@@ -1,7 +1,12 @@
 /* Reset provided by https://github.com/gatsbyjs/gatsby-starter-blog via MIT license */
+$green: #45A660;
+$dgreen: #194525;
+$black: #484848;
+$grey: #898989;
 
 html {
-  font-family: sans-serif;
+  font-family: CircularStd, sans-serif;
+  font-weight: 800;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
 }
@@ -63,7 +68,7 @@ dfn {
   font-style: italic;
 }
 h1 {
-  font-size: 2em;
+  font-size: 3em;
   margin: 0.67em 0;
 }
 mark {
@@ -96,7 +101,7 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
+  font-family: CircularStd, monospace, monospace;
   font-size: 1em;
 }
 figure {
@@ -112,8 +117,14 @@ input,
 optgroup,
 select,
 textarea {
-  font: inherit;
-  margin: 0;
+  font: CircularStd;
+  font-size: 1rem;
+  font-weight: 700;
+  margin: 1.5rem 0 0;
+}
+button:hover {
+    color: $dgreen;
+    border-color: $dgreen;
 }
 optgroup {
   font-weight: 700;
@@ -125,25 +136,30 @@ input {
 button,
 select {
   text-transform: none;
+  border-color: $dgreen;
 }
 [type="reset"],
 [type="submit"],
 button,
 html [type="button"] {
-  -webkit-appearance: button;
+    background-color: white;
+    color: $green;
+    border-width: medium;
+    border-color: $green;
+    padding: 0.6rem 1.3rem;
 }
 [type="button"]::-moz-focus-inner,
 [type="reset"]::-moz-focus-inner,
 [type="submit"]::-moz-focus-inner,
 button::-moz-focus-inner {
-  border-style: none;
-  padding: 0;
+  padding: 3rem;
+  border-color: $dgreen;
 }
 [type="button"]:-moz-focusring,
 [type="reset"]:-moz-focusring,
 [type="submit"]:-moz-focusring,
 button:-moz-focusring {
-  outline: 1px dotted ButtonText;
+  border-color: $dgreen;
 }
 fieldset {
   border: 1px solid silver;
@@ -202,7 +218,7 @@ html {
 }
 body {
   color: hsla(0, 0%, 0%, 0.8);
-  font-family: sans-serif;
+  font-family: CircularStd, sans-serif;
   font-weight: normal;
   word-wrap: break-word;
   font-kerning: normal;
@@ -231,12 +247,13 @@ h1 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  color: $green;
+  font-family: CircularStd, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 2.25rem;
+  letter-spacing: 1.25px;
+  font-size: 2.75rem;
   line-height: 1.1;
 }
 h2 {
@@ -247,13 +264,14 @@ h2 {
   padding-left: 0;
   padding-right: 0;
   padding-top: 0;
-  margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  margin-bottom: 2rem;
+  color: $black;
+  font-family: CircularStd, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1.62671rem;
+  letter-spacing: 1.25px;
+  font-size: 2.5rem;
   line-height: 1.1;
 }
 h3 {
@@ -265,12 +283,13 @@ h3 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  color: $green;
+  font-family: CircularStd, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-weight: 600;
   text-rendering: optimizeLegibility;
-  font-size: 1.38316rem;
+  letter-spacing: 1.25px;
+  font-size: 2rem;
   line-height: 1.1;
 }
 h4 {
@@ -282,12 +301,12 @@ h4 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  color: $black;
+  font-family: CircularStd, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   text-rendering: optimizeLegibility;
-  font-size: 1rem;
+  font-size: 1.2rem;
   line-height: 1.1;
 }
 h5 {
@@ -300,12 +319,12 @@ h5 {
   padding-top: 0;
   margin-bottom: 1.45rem;
   color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  font-family: Consolas, CircularStd, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
-  font-size: 0.85028rem;
+  font-size: 1.09rem;
   line-height: 1.1;
+  color: $grey;
 }
 h6 {
   margin-left: 0;
@@ -316,10 +335,9 @@ h6 {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
-  color: inherit;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
+  color: $grey;
+  font-family: Consolas, CircularStd, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
     Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-  font-weight: bold;
   text-rendering: optimizeLegibility;
   font-size: 0.78405rem;
   line-height: 1.1;
@@ -387,6 +405,7 @@ p {
   padding-right: 0;
   padding-top: 0;
   margin-bottom: 1.45rem;
+  font-weight: 400;
 }
 figure {
   margin-left: 0;

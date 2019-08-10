@@ -1,21 +1,33 @@
 import React from 'react'
+import PropTypes from "prop-types"
 import { Link } from 'gatsby'
 
 import Layout from '../components/layout'
 import Head from '../components/head'
 
+import Footer from '../components/footer'
+import Main from './main'
+import About from './about'
+import Contact from './contact'
+import Project from './project'
+import Experience from './experience'
+
+
 // Link is react component, that preloads page content for instant loading
+
+if (typeof window !== "undefined") {
+  // eslint-disable-next-line global-require
+  require("smooth-scroll")('a[href*="#"]')
+}
 
 const IndexPage = () => {
     return (
         <Layout>
-            <Head title="Home"/>
-            <h1>Hello.</h1>
-            <h2>I'm Gina, a UBC COGS student!</h2>
-            <p><Link to="/contact">Need a developer? Contact me.</Link>
-            <br />
-            <Link to="/about">About me.</Link>
-            </p>
+            <Main />
+            <About />
+            <Experience />
+            <Project />
+            <Contact />
         </Layout>
     )
 }

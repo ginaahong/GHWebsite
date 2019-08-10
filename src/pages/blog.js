@@ -1,10 +1,12 @@
 import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from './layout'
 import blogStyles from './blog.module.scss'
 import Head from '../components/head'
 
+import Header from '../components/header'
+import Footer from '../components/footer'
 
 const BlogPage = () => {
     const data = useStaticQuery(graphql`
@@ -44,6 +46,7 @@ const BlogPage = () => {
                     )
                 })}
             </ol>
+            <Footer />
         </Layout>
     )
 }

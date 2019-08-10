@@ -1,9 +1,26 @@
-import React from 'react'
+import React, { useState, useEffect }  from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import headerStyles from './header.module.scss'
 
+import logo from '../images/GH_big.png'
+import resume from '../images/ginahong_resume.pdf'
+import "circular-std";
+
 const Header = () => {
+    /*
+    const [scroll, setScroll] = useState(0)
+
+    useEffect(() => {
+        document.addEventListener("scroll", () => {
+            const scrollCheck = window.scrollY < 10
+            if (scrollCheck !== scroll) {
+                setScroll(scrollCheck)
+            }
+        })
+    })
+    */
+
     const data_title = useStaticQuery(graphql`
         query {
             site {
@@ -15,36 +32,37 @@ const Header = () => {
         `)
 
     return (
-        <header className={headerStyles.header}>
-            <h1>
-                <Link className={headerStyles.title} to="/">
-                    {data_title.site.siteMetadata.title}
-                </Link>
-            </h1>
-            <nav>
-                <ul className={headerStyles.navList}>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/blog">
-                            Blog
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/about">
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/contact">
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
-            </nav>
+        <header id="header" name="header" className={headerStyles.header}>
+            <Link className={headerStyles.logo_box} activeClassName={headerStyles.logo_box} to="/#main">
+                <img src={logo} alt="logo"/>
+            </Link>
+            <ul className={headerStyles.navList}>
+                <li>
+                    <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/#about">
+                        About
+                    </Link>
+                </li>
+                <li>
+                    <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/#experience">
+                        Experience
+                    </Link>
+                </li>
+                <li>
+                    <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/#project">
+                        Project
+                    </Link>
+                </li>
+                <li>
+                    <Link className={headerStyles.navItem} activeClassName={headerStyles.activeNavItem} to="/#contact">
+                        Contact
+                    </Link>
+                </li>
+                <li>
+                    <a className={headerStyles.navItem} href={resume} target="_blank">
+                        Resume
+                    </a>
+                </li>
+            </ul>
         </header>
     )
 }
