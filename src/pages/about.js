@@ -1,7 +1,7 @@
 import React from 'react';
 import { Link } from 'gatsby'
 
-import Layout from '../components/layout'
+import Layout from './layout'
 import Head from '../components/head'
 
 
@@ -9,8 +9,9 @@ const AboutPage = () => {
     return (
         <Layout>
             <Head title="About Me"/>
-            <h1>About Me.</h1>
-            <h2>Hello! I’m Gina, a fourth-year Cognitive Systems student at UBC.</h2>
+            <h1 id="about"> <br/> <br/> </h1>
+            <h3>About Me.</h3>
+            <h4>Hello! I’m <b><i>Gina</i></b>, a fourth-year Cognitive Systems student at UBC.</h4>
             <p>I’m interested in developing practical solutions to everyday problems. I’m constantly learning more about programming and enjoy the challenges that come with it.
             <br />
             <br />
@@ -20,7 +21,7 @@ const AboutPage = () => {
             or cooking <span role="img" aria-label="egg">🍳</span>!
             <br />
             <br />
-            I’m currently searching for a co-op position for 2019 Sept-Dec.
+            I am searching for a developer position in <b><i>2020 May-August</i></b>!
             <br /> <br />
             <Link to="/contact">You can reach me here</Link>
             </p>

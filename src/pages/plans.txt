@@ -1,0 +1,9 @@
+1. Experience.
+- populate with .md files
+- position name, company name, date(MMMM YYYY format)
+- bullet point description of responsibilities
+
+2. Projects.
+- populate with .md files
+- project type, project name, link(s)(github, appstore, etc)
+- bullet point description of work
