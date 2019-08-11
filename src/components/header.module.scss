@@ -42,10 +42,9 @@ $maxHeight: 600px;
 }
 
 @media (max-width: $maxWidth) {
-  // .header {
-  //   height: 54px;
-  //   margin-bottom: 10vh;
-  // }
+  .header {
+    height: 54px;
+  }
   .nav-list {
       margin-left: 10vw;
   }

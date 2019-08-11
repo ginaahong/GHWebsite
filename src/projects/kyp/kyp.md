@@ -1,5 +1,5 @@
 ---
-order: "2"
+order: "4"
 type: "Frontend & UX Design"
 title: "Kyp's Journey Home"
 team: "NW Hacks"
@@ -8,8 +8,7 @@ external: ""
 cover: "./kyp_screenshot.png"
 tech:
     - React
-    - HTML / CSS
-    - Sketch
+    - HTML/CSS
     - Adobe Illustrator
 
 ---

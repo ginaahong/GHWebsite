@@ -5,12 +5,18 @@ import styled from 'styled-components'
 
 import Layout from './layout'
 
+// Credit to https://brittanychiang.com/ on formating the tabs and utilizing useState!
+
 const TabsContainer = styled.div`
   width: 100%;
   display: flex;
   align-items: flex-start;
   position: relative;
   top: -2vh;
+  a {
+      text-decoration: inherit;
+      color: inherit;
+  }
 `;
 
 const Tabs = styled.ul`
@@ -74,11 +80,15 @@ const TabContent = styled.div`
 
     h4 {
         margin-top: 1rem;
-        font-weight: 800;
+        font-weight: 600;
     }
     ul {
         li {
             font-size: 0.87rem;
+            a {
+                text-decoration: none;
+                color: inherit;
+            }
         }
     }
 `;
