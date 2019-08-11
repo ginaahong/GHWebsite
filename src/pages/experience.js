@@ -53,30 +53,30 @@ const Highlight = styled.span`
 `;
 
 const Content = styled.div`
-position: relative;
-padding-top: 12px;
-padding-left: 30px;
-flex-grow: 1;
+    position: relative;
+    padding-top: 12px;
+    padding-left: 30px;
+    flex-grow: 1;
 `;
 
 const TabContent = styled.div`
-  left: 1rem;
-  width: 100%;
-  height: auto;
-  z-index: ${props => (props.isActive ? 2 : -1)};
-  visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
-  transition-duration: ${props => (props.isActive ? '1s' : '0s')};
-  position: ${props => (props.isActive ? 'relative' : 'absolute')};
+    left: 1rem;
+    width: 100%;
+    height: auto;
+    z-index: ${props => (props.isActive ? 2 : -1)};
+    visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
+    transition-duration: ${props => (props.isActive ? '1s' : '0s')};
+    position: ${props => (props.isActive ? 'relative' : 'absolute')};
 
-  h4 {
-      margin-top: 1rem;
-      font-weight: 800;
-  }
-  ul {
-      li {
-          font-size: 0.87rem;
-      }
-  }
+    h4 {
+        margin-top: 1rem;
+        font-weight: 800;
+    }
+    ul {
+        li {
+            font-size: 0.87rem;
+        }
+    }
 `;
 
 const Company = styled.span`
