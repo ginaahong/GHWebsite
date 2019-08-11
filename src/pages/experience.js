@@ -6,9 +6,11 @@ import styled from 'styled-components'
 import Layout from './layout'
 
 const TabsContainer = styled.div`
+  width: 100%;
   display: flex;
   align-items: flex-start;
   position: relative;
+  top: -2vh;
 `;
 
 const Tabs = styled.ul`
@@ -16,6 +18,7 @@ const Tabs = styled.ul`
     position: relative;
     width: max-content;
     z-index: 3;
+    top: 2vh;
 
     li {
         list-style-type: none;
@@ -29,6 +32,7 @@ const Tab = styled.button`
     font-weight: ${props => props.isActive ? 'book' : 'normal' };
     color: ${props => props.isActive ? '#45A660' : '#898989' }
     padding: 0 1.5rem 0.1rem;
+    outline: none;
     border: none;
     background-color: transparent;
     text-align: left;
@@ -60,7 +64,7 @@ const Content = styled.div`
 `;
 
 const TabContent = styled.div`
-    left: 1rem;
+    left: -2vw;
     width: 100%;
     height: auto;
     z-index: ${props => (props.isActive ? 2 : -1)};
