@@ -1,7 +1,88 @@
 import React, { useState } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
+import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import Layout from './layout'
+
+const TabsContainer = styled.div`
+  display: flex;
+  align-items: flex-start;
+  position: relative;
+`;
+
+const Tabs = styled.ul`
+    display: block;
+    position: relative;
+    width: max-content;
+    z-index: 3;
+
+    li {
+        list-style-type: none;
+        margin-left: -50px;
+    }
+`;
+
+const Tab = styled.button`
+    font-family: Consolas;
+    font-size: 0.9rem;
+    font-weight: book;
+    color: ${props => props.isActive ? '#45A660' : '#898989' }
+    padding: 0 1.5rem 0.1rem;
+    border: none;
+    background-color: transparent;
+    text-align: left;
+    width: 100%;
+    &:hover,
+    &:focus {
+        color: #45A660;
+    }
+`;
+
+const Highlight = styled.span`
+    display: block;
+    background: #898989;
+    position: absolute;
+    top: ${props => props.activetab > 0 ? (props.activetab * 3.5 + 0.6 ) : 0.8 }rem;
+    left: 0.3rem;
+    width: 0.15rem;
+    height: 2.5rem;
+    z-index: 10;
+    margin-left: -45px;
+    transition-duration: ${props => (props.isActive ? '1s' : '0s')};
+`;
+
+const Content = styled.div`
+position: relative;
+padding-top: 12px;
+padding-left: 30px;
+flex-grow: 1;
+`;
+
+const TabContent = styled.div`
+  left: 1rem;
+  width: 100%;
+  height: auto;
+  z-index: ${props => (props.isActive ? 2 : -1)};
+  visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
+  transition-duration: ${props => (props.isActive ? '1s' : '0s')};
+  position: ${props => (props.isActive ? 'relative' : 'absolute')};
+
+  h4 {
+      margin-top: 1rem;
+      font-weight: 800;
+  }
+  ul {
+      li {
+          font-size: 0.87rem;
+      }
+  }
+`;
+
+const Company = styled.span`
+    color: #45A660;
+`;
+
 
 const ExpPage = () => {
     const data = useStaticQuery(graphql`
@@ -31,53 +112,56 @@ const ExpPage = () => {
         <Layout>
             <p id="experience"><br/><br/></p>
             <h3>Experience.</h3>
+            <TabsContainer>
+            <Tabs>
+            {data.allMarkdownRemark.edges.map((edge, i) => {
+                const company = edge.node.frontmatter.company
+                return (
+                    <li key={i}>
+                    <Tab
+                    isActive={ activeTab === i }
+                    onClick={ () => setActiveTab(i) }
+                    role="tab"
+                    aria-selected={ activeTab === i ? 'true' : 'false' }
+                    id={`tab${i}`}
+                    tabIndex={ activeTab === i ? '0' : '-1'}>
+                    <span>{company}</span>
+                    </Tab>
+                    </li>
+                );
+            })}
+            <Highlight activetab={activeTab}></Highlight>
+            </Tabs>
             <div>
-                <ul>
-                    {data.allMarkdownRemark.edges.map((edge, i) => {
-                        const company = edge.node.frontmatter.company
-                        return (
-                            <li key={i}>
-                                <button
-                                isActive={ activeTab === i }
-                                onClick={ () => setActiveTab(i) }
-                                role="tab"
-                                aria-selected={ activeTab === i ? 'true' : 'false' }
-                                id={`tab${i}`}
-                                tabIndex={ activeTab === i ? '1' : '0'}>
-                                <span>{company}</span>
-                                </button>
-                            </li>
-                        );
-                    })}
-                    <span activetab={activeTab} ></span>
-                </ul>
+            {data.allMarkdownRemark.edges.map((edge, i) => {
+                const frontm = edge.node.frontmatter
+                return (
+                    <TabContent
+                    key={i}
+                    isActive={ activeTab === i }
+                    id={`job${i}`}
+                    role="tabpanel"
+                    tabIndex="1"
+                    aria-labelledby={`job${i}`}
+                    aria-hidden={ activeTab !== i }
+                    >
+                    <h4>
+                    <span>{frontm.position}</span>
+                    <Company>&nbsp;@&nbsp;{frontm.company}</Company>
+                    </h4>
+                    <h6>{frontm.from.toUpperCase()} - {frontm.to.toUpperCase()}</h6>
+                    <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
+                    </TabContent>
+                );
+            })}
             </div>
-            <content>
-                {data.allMarkdownRemark.edges.map((edge, i) => {
-                    const frontm = edge.node.frontmatter
-                    return (
-                        <div
-                        key={i}
-                        isActive={ activeTab === i}
-                        id={`job${i}`}
-                        role="tabpanel"
-                        tabIndex="1"
-                        aria-labelledby={`job${i}`}
-                        aria-hidden={ activeTab !== i }
-                        >
-                            <h4>
-                                <span>{frontm.position}</span>
-                                <span>&nbsp;@&nbsp;</span>
-                                <span>{frontm.company}</span>
-                            </h4>
-                            <h6>{frontm.from} - {frontm.to}</h6>
-                            <div dangerouslySetInnerHTML={{ __html: edge.node.html }} />
-                        </div>
-                    );
-                })}
-            </content>
+            </TabsContainer>
         </Layout>
     )
 }
+
+ExpPage.propTypes = {
+  data: PropTypes.array.isRequired,
+};
 
 export default ExpPage
