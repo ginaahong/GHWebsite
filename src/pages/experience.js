@@ -36,8 +36,9 @@ const Tab = styled.button`
     font-family: Consolas;
     font-size: 0.9rem;
     font-weight: ${props => props.isActive ? 'book' : 'normal' };
-    color: ${props => props.isActive ? '#45A660' : '#898989' }
-    padding: 0 1.5rem 0.1rem;
+    color: ${props => props.isActive ? '#45A660' : '#898989' };
+    padding: 1.2rem 1.5rem 0rem;
+    margin-top: 0.3rem;
     outline: none;
     border: none;
     background-color: transparent;
@@ -53,7 +54,7 @@ const Highlight = styled.span`
     display: block;
     background: #898989;
     position: absolute;
-    top: ${props => props.activetab > 0 ? (props.activetab * 3.5 + 0.6 ) : 0.8 }rem;
+    top: ${props => props.activetab > 0 ? (props.activetab * 3.1 + 1.2 ) : 0.8 }rem;
     left: 0.3rem;
     width: 0.15rem;
     height: 2.5rem;
@@ -70,6 +71,8 @@ const Content = styled.div`
 `;
 
 const TabContent = styled.div`
+    outline: none;
+    border: none;
     left: -2vw;
     width: 100%;
     height: auto;

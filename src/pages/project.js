@@ -9,15 +9,26 @@ import Layout from './layout'
 import github from '../images/github.png'
 import external from '../images/external_link.png'
 
+
 const TabsContainer = styled.div`
     width: 110%;
     display: inline;
     align-items: flex-start;
     position: relative;
     top: -2vh;
+    outline: none;
+    border: none;
+    &:hover,
+    &:focus {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+    }
 `;
 
 const Tabs = styled.ul`
+    outline: none;
+    border: none;
     padding-left: 0;
     display: flex;
     list-style-type: none;
@@ -32,14 +43,18 @@ const Tab = styled.button`
     border: none;
     background-color: transparent;
     color: ${props => props.isActive ? '#45A660' : '#898989' };
-    font-weight: ${props => props.isActive ? 'book' : 'normal'};
-    font-size: 0.85rem;
+    font-family: CircularStd;
+    font-weight: ${props => props.isActive ? '600' : 'normal'};
+    font-size: 0.9rem;
     padding-right: 3rem;
     text-align: left;
     width: 100%;
     &:hover,
     &:focus {
         color: #45A660;
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
     }
 `;
 
@@ -61,9 +76,17 @@ const Content = styled.div`
     padding-top: 12px;
     padding-left: 30px;
     flex-grow: 1;
+    &:hover,
+    &:focus {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
+    }
 `;
 
 const Desc = styled.div`
+    outline: none;
+    border: none;
     width: 110%;
     height: auto;
     margin-left: -5%;
@@ -109,7 +132,7 @@ const Tech = styled.div`
     h6 {
         margin-right: 1rem;
         font-size: 0.8rem;
-        color: #494949;
+        color: color;
         font-weight: 100;
     }
     margin-bottom: 1.5rem;
@@ -121,6 +144,12 @@ const Links = styled.div`
         max-height: 2.5rem;
         max-width: 2.5rem;
         margin-right: 2rem;
+        &:hover,
+        &:focus {
+            outline: 0;
+            border: none;
+            -moz-outline-style: none;
+        }
     }
     img {
         max-width: 2.5rem;
@@ -133,6 +162,14 @@ const Links = styled.div`
         position: relative;
         top: -1px;
         opacity: 0.6;
+        outline: 0;
+        -moz-outline-style: none;
+    }
+    &:hover,
+    &:focus {
+        outline: 0;
+        border: none;
+        -moz-outline-style: none;
     }
 `;
 
@@ -140,7 +177,7 @@ const Links = styled.div`
 const ImgContainer = styled.div`
     float: right;
     width: 40%;
-    margin-top: -5vh;
+    margin-top: -45%;
 `;
 
 const FeaturedImage = styled(Img)`
