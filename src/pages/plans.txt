@@ -1,9 +1,17 @@
 1. Experience.
 - populate with .md files O (TA, RA, UX)
-- position name, company name, date(MMMM YYYY format)
-- bullet point description of responsibilities
+- position name, company name, date(MMMM YYYY format / momentjs) O (complete!)
+- bullet point description of responsibilities (complete!)
+
+- tab styling and functionality (complete!)
+
+- animation / transitions
 
 2. Projects.
-- populate with .md files
-- project type, project name, link(s)(github, appstore, etc)
-- bullet point description of work
+- populate with .md files (Complete)
+- project type, project name, link(s)(github, appstore, etc) (complete)
+- bullet point description of work (complete)
+
+- tab styling and functionality
+
+- animation / transitions

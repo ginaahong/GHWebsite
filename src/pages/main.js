@@ -10,7 +10,7 @@ const MainPage = () => {
     return (
         <Layout>
             <Head title="main" />
-            <h6 id="main"> </h6>
+            <h6 id="main"><br/><br/><br/><br/><br/></h6>
             <h5>Hello! My name is</h5>
             <h1>Gina Hong.</h1>
             <h2>I design, research, and code.</h2>

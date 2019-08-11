@@ -1,4 +1,4 @@
-import React, { useState, useEffect }  from 'react'
+import React from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import headerStyles from './header.module.scss'
@@ -58,7 +58,7 @@ const Header = () => {
                     </Link>
                 </li>
                 <li>
-                    <a className={headerStyles.navItem} href={resume} target="_blank">
+                    <a className={headerStyles.navItem} href={resume} target="_blank" rel="noopener noreferrer">
                         Resume
                     </a>
                 </li>

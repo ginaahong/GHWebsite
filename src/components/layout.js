@@ -7,7 +7,7 @@ import '../styles/index.scss'
 import "circular-std";
 
 import layoutStyles from './layout.module.scss'
-import background from '../images/main_bg.png'
+//import background from '../images/main_bg.png'
 
 //import Home from '../pages/index'
 //import Contact from '../pages/contact'
