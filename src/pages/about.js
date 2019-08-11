@@ -23,7 +23,6 @@ const AboutPage = () => {
             <br />
             I am searching for a developer position in <b><i>2020 May-August</i></b>!
             <br /> <br />
-            <Link to="/contact">You can reach me here</Link>
             </p>
         </Layout>
     )
