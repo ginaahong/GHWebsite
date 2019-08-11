@@ -1,5 +1,5 @@
 1. Experience.
-- populate with .md files
+- populate with .md files O (TA, RA, UX)
 - position name, company name, date(MMMM YYYY format)
 - bullet point description of responsibilities
 
