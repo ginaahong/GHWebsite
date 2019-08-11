@@ -120,8 +120,15 @@ const Detail = styled.div`
             margin-left: -5%;
             a {
                 text-decoration: inherit;
-                font-weight: 500;
+                font-weight: 400;
                 color: #45A660;
+                &:hover,
+                &:focus {
+                    outline: 0;
+                    border: none;
+                    -moz-outline-style: none;
+                    font-weight: 600;
+                }
             }
         }
     }
@@ -134,8 +141,8 @@ const Tech = styled.div`
         font-size: 0.8rem;
         color: color;
         font-weight: 100;
-    }
     margin-bottom: 1.5rem;
+    }
 `;
 
 const Links = styled.div`

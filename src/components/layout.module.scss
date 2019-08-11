@@ -1,5 +1,5 @@
 html {
-  font-family: 'Circular Std Bold', sans-serif;
+  font-family: CircularStd, 'Circular Std Bold', sans-serif;
   font-weight: 800;
   -ms-text-size-adjust: 100%;
   -webkit-text-size-adjust: 100%;
@@ -14,7 +14,8 @@ html {
 }
 
 .container {
-    margin: 0 auto;
+    margin-right: auto;
+    margin-left: auto;
     max-width: 750px;
     width: 100%;
     padding: 1rem;

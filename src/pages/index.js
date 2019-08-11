@@ -22,6 +22,7 @@ if (typeof window !== "undefined") {
 const IndexPage = () => {
     return (
         <Layout>
+            <h1><br/></h1>
             <Main />
             <About />
             <Experience />
