@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -26,7 +26,7 @@ const Tabs = styled.ul`
 const Tab = styled.button`
     font-family: Consolas;
     font-size: 0.9rem;
-    font-weight: book;
+    font-weight: ${props => props.isActive ? 'book' : 'normal' };
     color: ${props => props.isActive ? '#45A660' : '#898989' }
     padding: 0 1.5rem 0.1rem;
     border: none;
@@ -132,7 +132,7 @@ const ExpPage = () => {
             })}
             <Highlight activetab={activeTab}></Highlight>
             </Tabs>
-            <div>
+            <Content>
             {data.allMarkdownRemark.edges.map((edge, i) => {
                 const frontm = edge.node.frontmatter
                 return (
@@ -154,7 +154,7 @@ const ExpPage = () => {
                     </TabContent>
                 );
             })}
-            </div>
+            </Content>
             </TabsContainer>
         </Layout>
     )
