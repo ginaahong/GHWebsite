@@ -10,7 +10,7 @@ import github from '../images/github.png'
 import external from '../images/external_link.png'
 
 const TabsContainer = styled.div`
-    width: 100%;
+    width: 110%;
     display: inline;
     align-items: flex-start;
     position: relative;
@@ -48,7 +48,7 @@ const Highlight = styled.span`
     background: #898989;
     position: absolute;
     top: 4.2rem;
-    left: ${props => props.activeTab > 0 ? (props.activeTab * 10 + 1.1 ) : 0.8 }rem;
+    left: ${props => props.activeTab > 0 ? (props.activeTab * 9 + 2.3 ) : 2.2 }rem;
     width: 8rem;
     height: 0.15rem;
     z-index: 10;
@@ -95,15 +95,31 @@ const Detail = styled.div`
         li {
             font-size: 0.87rem;
             margin-left: -5%;
+            a {
+                text-decoration: inherit;
+                font-weight: 500;
+                color: #45A660;
+            }
         }
     }
+`;
+
+const Tech = styled.div`
+    display: flex;
+    h6 {
+        margin-right: 1rem;
+        font-size: 0.8rem;
+        color: #494949;
+        font-weight: 100;
+    }
+    margin-bottom: 1.5rem;
 `;
 
 const Links = styled.div`
     display: flex;
     a {
-        max-height: 3rem;
-        max-width: 3rem;
+        max-height: 2.5rem;
+        max-width: 2.5rem;
         margin-right: 2rem;
     }
     img {
@@ -139,7 +155,7 @@ const ProjectPage = () => {
     const data = useStaticQuery(graphql`
         query {
   allMarkdownRemark (
-    filter: { fileAbsolutePath: { regex: "/projects/" } }
+    filter: { fileAbsolutePath: { regex: "/projects/"}, frontmatter : { order : { in : ["1", "2", "3", "4" ] }}}
     sort: { fields: [ frontmatter___order ], order: ASC }
   ) {
     edges {
@@ -167,7 +183,7 @@ const ProjectPage = () => {
 }
         `)
 
-    const [ activeTab, setActiveTab ] = useState(1)
+    const [ activeTab, setActiveTab ] = useState(0)
 
     return (
         <Layout>
@@ -218,6 +234,11 @@ const ProjectPage = () => {
                             <h6><span>{frontm.type}</span></h6>
                             <h4>{frontm.title}</h4>
                             <div dangerouslySetInnerHTML={{__html: edge.node.html} } />
+                            <Tech>{frontm.tech.map((tech) => {
+                                return (
+                                    <h6>+{tech}</h6>
+                                );
+                            })}</Tech>
                             <Links>
                                 <a href={frontm.github} target="_blank" rel="noopener noreferrer"><img src={github} alt="github"/></a>
                                 {ext}
