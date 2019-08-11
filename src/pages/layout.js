@@ -2,7 +2,6 @@ import React from 'react'
 
 import '../styles/index.scss'
 
-import Header from '../components/header'
 import layoutStyles from '../components/layout.module.scss'
 
 //import Home from '../pages/index'

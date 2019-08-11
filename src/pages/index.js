@@ -1,11 +1,10 @@
 import React from 'react'
-import PropTypes from "prop-types"
-import { Link } from 'gatsby'
+//import PropTypes from "prop-types"
 
 import Layout from '../components/layout'
-import Head from '../components/head'
+//import Head from '../components/head'
 
-import Footer from '../components/footer'
+//import Footer from '../components/footer'
 import Main from './main'
 import About from './about'
 import Contact from './contact'

@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Link, graphql, useStaticQuery } from 'gatsby'
+import { graphql, useStaticQuery } from 'gatsby'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
@@ -26,7 +26,7 @@ const Tabs = styled.ul`
 const Tab = styled.button`
     font-family: Consolas;
     font-size: 0.9rem;
-    font-weight: book;
+    font-weight: ${props => props.isActive ? 'book' : 'normal' };
     color: ${props => props.isActive ? '#45A660' : '#898989' }
     padding: 0 1.5rem 0.1rem;
     border: none;
@@ -53,30 +53,30 @@ const Highlight = styled.span`
 `;
 
 const Content = styled.div`
-position: relative;
-padding-top: 12px;
-padding-left: 30px;
-flex-grow: 1;
+    position: relative;
+    padding-top: 12px;
+    padding-left: 30px;
+    flex-grow: 1;
 `;
 
 const TabContent = styled.div`
-  left: 1rem;
-  width: 100%;
-  height: auto;
-  z-index: ${props => (props.isActive ? 2 : -1)};
-  visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
-  transition-duration: ${props => (props.isActive ? '1s' : '0s')};
-  position: ${props => (props.isActive ? 'relative' : 'absolute')};
+    left: 1rem;
+    width: 100%;
+    height: auto;
+    z-index: ${props => (props.isActive ? 2 : -1)};
+    visibility: ${props => (props.isActive ? 'visible' : 'hidden')};
+    transition-duration: ${props => (props.isActive ? '1s' : '0s')};
+    position: ${props => (props.isActive ? 'relative' : 'absolute')};
 
-  h4 {
-      margin-top: 1rem;
-      font-weight: 800;
-  }
-  ul {
-      li {
-          font-size: 0.87rem;
-      }
-  }
+    h4 {
+        margin-top: 1rem;
+        font-weight: 800;
+    }
+    ul {
+        li {
+            font-size: 0.87rem;
+        }
+    }
 `;
 
 const Company = styled.span`
@@ -132,7 +132,7 @@ const ExpPage = () => {
             })}
             <Highlight activetab={activeTab}></Highlight>
             </Tabs>
-            <div>
+            <Content>
             {data.allMarkdownRemark.edges.map((edge, i) => {
                 const frontm = edge.node.frontmatter
                 return (
@@ -154,7 +154,7 @@ const ExpPage = () => {
                     </TabContent>
                 );
             })}
-            </div>
+            </Content>
             </TabsContainer>
         </Layout>
     )
