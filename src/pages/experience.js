@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { Link, graphql, useStaticQuery } from 'gatsby'
 
 import Layout from './layout'
@@ -25,6 +25,8 @@ const ExpPage = () => {
             }
         }`)
 
+    const [ activeTab, setActiveTab ] = useState(0);
+
     return (
         <Layout>
             <p id="experience"><br/><br/></p>
@@ -35,18 +37,34 @@ const ExpPage = () => {
                         const company = edge.node.frontmatter.company
                         return (
                             <li key={i}>
-                                <button><span>{company}</span></button>
+                                <button
+                                isActive={ activeTab === i }
+                                onClick={ () => setActiveTab(i) }
+                                role="tab"
+                                aria-selected={ activeTab === i ? 'true' : 'false' }
+                                id={`tab${i}`}
+                                tabIndex={ activeTab === i ? '1' : '0'}>
+                                <span>{company}</span>
+                                </button>
                             </li>
                         );
                     })}
-                    <span></span>
+                    <span activetab={activeTab} ></span>
                 </ul>
             </div>
             <content>
                 {data.allMarkdownRemark.edges.map((edge, i) => {
                     const frontm = edge.node.frontmatter
                     return (
-                        <div>
+                        <div
+                        key={i}
+                        isActive={ activeTab === i}
+                        id={`job${i}`}
+                        role="tabpanel"
+                        tabIndex="1"
+                        aria-labelledby={`job${i}`}
+                        aria-hidden={ activeTab !== i }
+                        >
                             <h4>
                                 <span>{frontm.position}</span>
                                 <span>&nbsp;@&nbsp;</span>

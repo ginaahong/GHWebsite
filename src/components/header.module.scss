@@ -5,8 +5,8 @@ $maxHeight: 600px;
 
 
 .header {
-    padding: 1rem 1rem 3rem; //top l/r bottom
-    margin: 1;
+    padding: 1rem 1rem 0rem; //top l/r bottom
+    margin: 0;
     width: 100%;
     z-index: 1;
     background-color: rgba(255, 255, 255, .7);
@@ -42,10 +42,10 @@ $maxHeight: 600px;
 }
 
 @media (max-width: $maxWidth) {
-  .header {
-    height: 54px;
-    margin-bottom: 10vh;
-  }
+  // .header {
+  //   height: 54px;
+  //   margin-bottom: 10vh;
+  // }
   .nav-list {
       margin-left: 10vw;
   }
@@ -55,9 +55,9 @@ $maxHeight: 600px;
 }
 @media (min-width: $minWidth){
   .header {
-    height: 72px;
-    padding: 1rem 4rem 3rem;
-    margin-bottom: 10vh;
+    height: 70px;
+    padding: 1rem 4rem 0rem;
+    margin-bottom: 0;
   }
   .nav-list {
       margin-left: 20vw;
