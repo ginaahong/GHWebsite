@@ -1,5 +1,5 @@
 ---
-company: "Learningbranch Inc."
+company: "Learningbranch"
 position: "Research Assistant"
 from: "2018-05-01"
 to: "2019-01-07"
