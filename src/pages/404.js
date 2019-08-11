@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 
 import errorStyle from './error.module.scss'
 import Layout1 from '../components/layout'
