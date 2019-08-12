@@ -1,16 +1,16 @@
-<!-- AUTO-GENERATED-CONTENT:START (STARTER) -->
-<p align="center">
-  <a href="https://www.gatsbyjs.org">
-    <img alt="Gatsby" src="https://www.gatsbyjs.org/monogram.svg" width="60" />
-  </a>
-</p>
 <h1 align="center">
-  Gatsby's hello-world starter
+  👋Gina Hong's Website
 </h1>
 
-Kick off your project with this hello-world boilerplate. This starter ships with the main Gatsby configuration files you might need to get up and running blazing fast with the blazing fast app generator for React.
+This is the second iteration of my personal website. Based off of Gatsby's hello-world starter, I referenced [Andrew Mead's gatsby tutorial](https://mead.io), and [Brittany Chiang's website](https://brittanychiang.com) to build the site.
 
-_Have another more specific idea? You may want to check out our vibrant collection of [official and community-created starters](https://www.gatsbyjs.org/docs/gatsby-starters/)._
+Unlike the previous iteration, information in both the "Experience" and "Project" section is updated/maintained using Markdown files! This allows for me to easily add/remove oudated info while not worrying about the costs of traditional CMSs.
+
+[Link to website](https://blissful-dijkstra-413936.netlify.com/)
+
+## 🔍Website preview
+
+
 
 ## 🚀 Quick start
 
