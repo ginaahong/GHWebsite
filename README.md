@@ -8,10 +8,10 @@ Unlike the previous iteration, information in both the "Experience" and "Project
 
 [Link to website](https://blissful-dijkstra-413936.netlify.com/)
 
-## 🔍 Website preview
+#### 🔍 Website preview
 <img src="https://github.com/ginaahong/GHWebsite/blob/master/src/images/website_overview.gif" height="500" />
 
-## 🗺 Future plans
+#### 🗺 Future plans
 
 * Animation/transitions when scrolling down or clicking on one of the Experience/Projects tabs
 * Commit to styled-components (instead of .scss)
