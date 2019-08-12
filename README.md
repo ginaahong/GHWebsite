@@ -6,7 +6,7 @@ This is the second iteration of my personal website. Based off of Gatsby's hello
 
 Unlike the previous iteration, information in both the "Experience" and "Project" section is updated/maintained using Markdown files! This allows for me to easily add/remove oudated info while not worrying about the costs of traditional CMSs.
 
-[Link to website](https://blissful-dijkstra-413936.netlify.com/)
+[Link to website](https://ginahong.com/)
 
 #### 🔍 Website preview
 <img src="https://github.com/ginaahong/GHWebsite/blob/master/src/images/website_overview.gif" height="500" />
