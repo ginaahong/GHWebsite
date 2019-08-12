@@ -1,5 +1,5 @@
 <h1 align="center">
-  👋Gina Hong's Website
+  👋 Gina Hong's Website
 </h1>
 
 This is the second iteration of my personal website. Based off of Gatsby's hello-world starter, I referenced [Andrew Mead's gatsby tutorial](https://mead.io), and [Brittany Chiang's website](https://brittanychiang.com) to build the site.
@@ -8,8 +8,14 @@ Unlike the previous iteration, information in both the "Experience" and "Project
 
 [Link to website](https://blissful-dijkstra-413936.netlify.com/)
 
-## 🔍Website preview
+## 🔍 Website preview
+<img src="https://github.com/ginaahong/GHWebsite/blob/master/src/images/website_overview.gif" height="500" />
 
+## 🗺 Future plans
+
+* Animation/transitions when scrolling down or clicking on one of the Experience/Projects tabs
+* Commit to styled-components (instead of .scss)
+* Unify site style by using a theme.js file that has all colors/fonts/etc...
 
 
 ## 🚀 Quick start
