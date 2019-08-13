@@ -14,7 +14,7 @@ const ContactPage = () => {
         <Layout>
             <h1 id="contact"> <br/> <br/> </h1>
             <h3>Contact Me</h3>
-            <form action="mailto:example@email.com">
+            <form action="mailto:me@ginahong.dev">
                 <button className={contactStyles.sites}>Get in touch</button>
             </form>
             <p>

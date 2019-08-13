@@ -4,7 +4,7 @@ import { Link } from 'gatsby'
 import headerStyles from './header.module.scss'
 
 import logo from '../images/GH_big.png'
-import resume from '../images/gina_hong_resume.pdf'
+import resume from '../images/gina_hong_resume_v3.pdf'
 import "circular-std";
 
 const Header = () => {
