@@ -4,7 +4,7 @@ type: "Web Development"
 title: "Personal Website"
 team: "personal project"
 github: "https://github.com/ginaahong/GHWebsite"
-external: "https://ginahong.com"
+external: "https://www.ginahong.dev"
 cover: "./website.png"
 tech:
     - Gatsby.js
