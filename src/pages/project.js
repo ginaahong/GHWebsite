@@ -141,7 +141,10 @@ const Tech = styled.div`
         font-size: 0.8rem;
         color: color;
         font-weight: 100;
-    margin-bottom: 1.5rem;
+        margin-bottom: 1.5rem;
+    }
+    h6:hover {
+        color: #484848;
     }
 `;
 
