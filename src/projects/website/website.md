@@ -9,7 +9,7 @@ cover: "./website.png"
 tech:
     - Gatsby.js
     - React
-    - Sketch
+    - GraphQL
 
 ---
 * My second try at building and designing my personal website! (this time using Gatsby.js)
