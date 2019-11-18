@@ -21,6 +21,27 @@ $green: #45A660;
         opacity: 0.6;
     }
 }
+.othersites {
+    float: right;
+    position: relative;
+    a {
+        max-height: 3rem;
+        max-width: 3rem;
+    }
+    img {
+        max-width: 2rem;
+        margin: 0rem 1.7rem 0rem 0rem;
+        opacity: 1;
+        transition: opacity .25s ease-in-out;
+        -moz-transition: opacity .25s ease-in-out;
+        -webkit-transition: opacity .25s ease-in-out;
+    }
+    img:hover {
+        position: relative;
+        top: -1px;
+        opacity: 0.6;
+    }
+}
 .button {
     float: right;
     margin: 0rem 1.4rem 0rem;

@@ -8,6 +8,7 @@ import Layout from './layout'
 
 import github from '../images/github.png'
 import external from '../images/external_link.png'
+import devpostimg from '../images/devpost.png'
 
 
 const TabsContainer = styled.div`
@@ -63,8 +64,8 @@ const Highlight = styled.span`
     background: #898989;
     position: absolute;
     top: 4.2rem;
-    left: ${props => props.activeTab > 0 ? (props.activeTab * 9 + 2.3 ) : 2.2 }rem;
-    width: 8rem;
+    left: ${props => props.activeTab > 0 ? (props.activeTab * 8.9 + props.activeTab ) : 2.25 }rem;
+    width: ${props => props.activeTab > 0 ? 7 : 4.7 }rem;;
     height: 0.15rem;
     z-index: 10;
     margin-left: -45px;
@@ -214,6 +215,7 @@ const ProjectPage = () => {
           team
           github
           external
+          devpost
           tech
           cover {
             childImageSharp {
@@ -259,12 +261,19 @@ const ProjectPage = () => {
             <Content>
             {data.allMarkdownRemark.edges.map((edge, i) => {
                 const frontm = edge.node.frontmatter
-                const haslink = (edge.node.frontmatter.external.length !== 0)
+                const hasextlink = (edge.node.frontmatter.external.length !== 0)
+                const hasdevpost = (edge.node.frontmatter.devpost.length !== 0)
                 let ext;
-                if (haslink) {
+                if (hasextlink) {
                     ext = <a href={frontm.external} target="_blank" rel="noopener noreferrer"><img src={external} alt="external site"/></a>
                 } else {
                     ext = ""
+                }
+                let devpost;
+                if (hasdevpost) {
+                    devpost = <a href={frontm.devpost} target="_blank" rel="noopener noreferrer"><img src={devpostimg} alt="devpost"/></a>
+                } else {
+                    devpost = ""
                 }
 
                 return (
@@ -289,6 +298,7 @@ const ProjectPage = () => {
                             <Links>
                                 <a href={frontm.github} target="_blank" rel="noopener noreferrer"><img src={github} alt="github"/></a>
                                 {ext}
+                                {devpost}
                             </Links>
                         </Detail>
                         <ImgContainer>

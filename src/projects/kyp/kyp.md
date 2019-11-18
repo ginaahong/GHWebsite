@@ -5,6 +5,7 @@ title: "Kyp's Journey Home"
 team: "NW Hacks"
 github: "https://github.com/ginaahong/kypsjourneyhome"
 external: ""
+devpost: "https://devpost.com/software/kyp-s-journey-home"
 cover: "./kyp_screenshot.png"
 tech:
     - React
