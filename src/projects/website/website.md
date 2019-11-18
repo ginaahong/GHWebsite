@@ -1,10 +1,11 @@
 ---
-order: "1"
+order: "2"
 type: "Web Development"
 title: "Personal Website"
 team: "personal project"
 github: "https://github.com/ginaahong/GHWebsite"
 external: "https://www.ginahong.dev"
+devpost: ""
 cover: "./website.png"
 tech:
     - Gatsby.js
