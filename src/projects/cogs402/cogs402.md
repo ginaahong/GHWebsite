@@ -4,7 +4,7 @@ type: "Self-directed Research"
 title: "COGS402"
 team: "UBC Sauder Learning Services"
 github: "https://github.com/ginaahong/cogs402_LA"
-external: '/static/GinaHong_cogs402_finalPaper_v3-3d3d880f2c93232d2b52e4aaff329513.pdf'
+external: "https://drive.google.com/file/d/1x3k9p6v0N_o-FgklMYAbwKhqHXyLBap0/view?usp=sharing"
 devpost: ""
 cover: "./pages.png"
 tech:
