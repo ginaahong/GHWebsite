@@ -1,5 +1,5 @@
 ---
-order: "4"
+order: "5"
 type: "Frontend & UX Design"
 title: "Kyp's Journey Home"
 team: "NW Hacks"
