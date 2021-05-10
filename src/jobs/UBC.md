@@ -1,5 +1,5 @@
 ---
-company: "UBC"
+company: "UBC CPSC"
 position: "Undergrad Teaching Assistant"
 from: "2017-09-01"
 to: "2019-07-10"
